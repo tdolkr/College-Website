@@ -1,0 +1,556 @@
+.navbar-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: white; /* Ensure navbar covers images */
+    z-index: 2; /* Ensure navbar is on top of images */
+}
+
+.line-1 {
+    float: left;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    border: none;
+    border-radius: 6px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar-1 img {
+    margin-top: 5px;
+    width: 80px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.navbar-1 p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.more svg {
+    width: 30px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+
+.navbar-1 a {
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 25px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.navbar-1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #35A6C9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.navbar-1 a:hover {
+    color: #35A6C9;
+}
+
+.navbar-1 a:hover::after {
+    transform: scaleX(1);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container-1 {
+    position: relative;
+    width: 500px;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.container-1 h1 {
+    position: absolute;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: left;
+    margin: 0;
+    color: #35A6C9;
+    font-weight: 300;
+}
+.container-1 button{
+    background-color: transparent;
+    font-size: 16px;
+        color: #35A6C9;
+        border: 2px solid #35A6C9;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 6px;
+
+}
+.container-1 button:hover {
+    background-color: #35A6C9;
+    color: white;
+  
+}
+
+.image-container {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    right: 0;
+    transform: translateY(-50%);
+    animation: moveImages 10s infinite;
+    z-index: -1; /* Ensure images are below navbar */
+}
+
+.image-container img {
+    padding: 20px;
+    display: block;
+    width: 400px;
+    height: auto;
+    margin-right: 500px; /* Adjust the space between images */
+
+}
+
+@keyframes moveImages {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+@keyframes moveImagesDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+.image-container-2 {
+    position: absolute;
+    top: 50%; /* Adjust the position relative to the h1 element */
+    right: 0;
+    transform: translateY(-50%);
+    animation: moveImagesDown 10s infinite;
+    z-index: -1;
+}
+.image-container-2 img {
+    padding: 20px;
+    display: block;
+    width: 450px;
+    height: auto;
+    margin-left: 20px;
+    
+}
+.container-2 {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    background-color: #35A6C9;
+    z-index: 3;
+    display: flex;
+    align-items: center; /* Vertically center align */
+    justify-content: center; /* Move content to the right side */
+    padding-right: 20px; /* Adjust spacing on the right side */
+}
+
+.container-2 svg {
+    width: 50%;
+    height: 50%;
+    fill: white;
+    opacity: 0.8;
+    margin-right: 80px;
+}
+.container-2 p {
+    font-size: 25px;
+    padding: 50px;
+    width: 100%; /* Ensure full width */
+    word-wrap: break-word; /* Automatically wrap text */
+    color: white;
+    line-height:1.5;
+    margin-left: 50px;
+}
+.container-2 button{
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .container-2 button svg{
+        width: 15px;
+        margin-left: 80px;
+        margin-right: 0;
+    }
+      
+      .container-2 button:hover {
+        background-color: white;
+        color: #35A6C9;
+        fill: #35A6C9;
+      
+}
+.container-3 {
+    overflow: hidden; /* Ensure the image stays within the container */
+    width: 100%; /* Adjust this according to your container's width */
+    height: 900px; /* Adjust this according to your container's height */
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 120px;
+
+}
+
+.container-3 img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+
+h1.cst-today {
+    padding: 50px;
+    margin-bottom: 40px;
+    font-size: 2.35em;
+    font-weight: bold;
+    text-align: center;
+    color: #35A6C9;
+
+}
+.hr-lines:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #35A6C9;
+  }
+  .hr-lines{
+    position: relative;
+    /*  new lines  */
+    max-width: 500px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  .hr-lines:after{
+    content:" ";
+    height: 2px;
+    width: 130px;
+    background: #35A6C9;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+    
+
+.board-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.board {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+.board-2{
+    width: 30%;
+    height: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+.board-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.board-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.board-content {
+    text-align: left;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+.read-more{
+    font-weight: 300;
+}
+.hr-line-2{
+    width: 10%;
+    justify-items: center;
+    height: 2px;
+    background-color: #35A6C9;
+    border: none;
+    margin: 0;
+    
+}
+
+.container-4{
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    
+}
+
+.container-4 p{
+    margin-top:0px;
+    font-size: 30px;
+    padding: 15px 120px 0 100px;
+    text-align: left;
+    font-weight: 800;
+    font-size: 2.35em;
+}
+.container-4 img{
+    margin-top: 20px;
+    width: 400px;
+    height: 600px;
+    margin-left:120px ;
+    float: left;
+    border-radius: 20px;
+}
+.container-4 svg{
+    margin-bottom: 650px;
+    
+}
+
+.study p{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #35A6C9;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.about-1 {
+    padding: 130px 100px;
+    text-align: left;
+}
+
+.about-1 ul {
+    display: flex;
+    align-items: center;
+}
+
+.about-1 li {
+    font-size: 30px;
+    list-style: none;
+    
+    
+}
+.about-1 p{
+    padding-top: 0;
+}
+
+.line {
+    flex-grow: 1;
+    margin: 0;
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin-left: 50px;
+    opacity: 0.1;
+}
+.about-1 li p{
+    font-size: 20px;
+    padding: 60px 40px;
+    line-height: 1.5;
+    
+}
+.about-1 p button{
+    background-color: transparent;
+        color: #35A6C9;
+        border: 2px solid #35A6C9;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+}
+.about-1 p button:hover{
+    background-color: #35A6C9;
+        color: white;
+        fill: white;
+}
+
+.video-container {
+    width: 500px;
+    margin-left: 50px;
+    float: right;
+}
+
+.video-container video {
+    width: 100%;
+    
+}
+.navbar-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background-color: #35A6C9; /* Ensure navbar covers images */
+    z-index: 2; /* Ensure navbar is on top of images */
+}
+.navbar-2 img {
+    margin-top: 5px;
+    width: 80px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.navbar-2 p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.navbar-2 a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.navbar-2 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.navbar-2 a:hover {
+    color: white;
+}
+
+.navbar-2 a:hover::after {
+    transform: scaleX(1);
+}
+.more-body{
+    background-color: #35A6C9;
+}
+.title-2{
+    color: white;
+}
+.custom-button-1{
+    background-color: transparent;
+    font-size: 16px;
+        color: #35A6C9;
+        border: 2px solid #35A6C9;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 6px;
+        margin-left: 40px;
+}
+.custom-button-1:hover {
+    background-color: #35A6C9;
+    color: white;
+  
+}
+
+
+
+
+
+
